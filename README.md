@@ -251,3 +251,5 @@ This project is open source and available for educational purposes.
 
 **Last Updated**: May 26, 2026
 **Version**: 1.0.0
+
+deployed link: https://laundrymart000.netlify.app
