@@ -15,7 +15,7 @@ Service ID:  service_a1b2c3d4e5f6g7h8
 Template ID: template_booking
 ```
 
-## Step 2: Update script.js (2 minutes)
+## Step 2: Update script.js 
 
 Open `script.js` on **Line 2** and replace:
 ```javascript
@@ -33,7 +33,7 @@ With your Service ID and Template ID.
 
 In EmailJS Dashboard → Email Templates → Create New:
 
-**Template content:**
+Template content:
 ```
 Dear {{customer_name}},
 
