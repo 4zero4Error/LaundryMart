@@ -35,6 +35,6 @@
     emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
     ```
 
-
+deployed link: https://laundrymart1111.netlify.app
 
 
