@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Laundry Mart</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+    <header class="container header">
+        <div class="logo">🧺 LaundryMart</div>
+        <nav class="nav">
+            <a href="#home" class="nav__item">Home</a>
+            <a href="#services" class="nav__item">Services</a>
+            <a href="#features" class="nav__item">About Us</a>
+            <a href="#footer" class="nav__item">Contact Us</a>
+        </nav>
+        <div class="username" id="cart-icon">🛒 Cart (0)</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="lower">
+            <div class="left">
+                <h2>Revitalize Your Clothes with Expert <span style="color: #e85d75;">Laundry Services!</span></h2>
+                <p>From premium dry cleaning to swift wash and fold, we
+                    deliver care and convenience. Schedule a pickup and rediscover the freshness
+                    of your clothes today!
+                </p>
+                <button class="btn-primary" onclick="scrollToServices()">Explore Services</button>
+            </div>
+            <div class="right">
+                <div class="img">
+                    <img src="https://png.pngtree.com/png-vector/20251120/ourmid/pngtree-simple-red-washing-machine-illustration-art-png-image_18021299.webp" alt="Laundry Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements">
+        <div class="achievements-content">
+            <h2>Our Achievements</h2>
+            <div class="achievements-stats">
+                <div class="achievement-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Laundry Services</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="stat-number">240+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="stat-number">2+ Yrs</div>
+                    <div class="stat-label">Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <div class="services-list">
+                <h2>Our Services</h2>
+                <p>Click On The Add To Cart Button To Add The Services To Your Cart</p>
+                
+                <div id="services-grid" class="services-grid">
+                    <!-- Services will be populated here by JavaScript -->
+                </div>
+                <p class="info-text">ℹ️ Add the items to the cart and book now</p>
+            </div>
+
+            <div class="cart-section">
+                <h3>Added Items</h3>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items">
+                        <!-- Cart items will be populated here -->
+                    </tbody>
+                </table>
+                <div class="total-section">
+                    <div class="total-amount">
+                        <span>Total Amount</span>
+                        <span id="total-price">₹0.00</span>
+                    </div>
+                </div>
+                <div class="booking-form">
+                    <h3>Book Now</h3>
+                    <form id="booking-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" name="customer_name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email ID</label>
+                                <input type="email" id="email" name="email" placeholder="john@gmail.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="9000000000" required>
+                            </div>
+                        </div>
+                        <input type="hidden" id="services-field" name="services" value="">
+                        <input type="hidden" id="total-field" name="total_amount" value="">
+                        <button type="submit" class="btn-book">Book now</button>
+                    </form>
+                    <div id="booking-message" class="booking-message hidden">
+                        Thank you For Booking the Service We will get back to you soon!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🧼</div>
+                <h3>Premium Services</h3>
+                <p>Elevate your wardrobe with our meticulous dry cleaning, ensuring garments look and feel as good as new.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☎️</div>
+                <h3>Quick Support</h3>
+                <p>We're committed to providing prompt solutions to ensure your experience is smooth and worry-free.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3>Hassle Free Delivery</h3>
+                <p>Enjoy seamless service with our convenient pickup and delivery options, tailored to your schedule.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Affordable Prices</h3>
+                <p>Experience exceptional care without breaking the bank – our affordable prices make laundry day stress-free.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <div class="newsletter-text">
+                <h2>Subscribe to our newsletter.</h2>
+            </div>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="text" id="subscriber-name" name="subscriber_name" placeholder="Full name" required>
+                <input type="email" id="subscriber-email" name="email" placeholder="Email" required>
+                <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Thank You Modal -->
+    <div id="thank-you-modal" class="modal hidden">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeThankYouModal()">✕</button>
+            <div class="modal-body">
+                <div class="success-icon">✅</div>
+                <h2>Booking Confirmed!</h2>
+                <p class="confirmation-text">Thank you for your booking. Your confirmation details are below.</p>
+                
+                <div class="booking-details">
+                    <div class="detail-row">
+                        <span class="detail-label">Confirmation #:</span>
+                        <span class="detail-value" id="confirmation-number">---</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Customer Name:</span>
+                        <span class="detail-value" id="detail-name">---</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value" id="detail-email">---</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Phone:</span>
+                        <span class="detail-value" id="detail-phone">---</span>
+                    </div>
+                    <div class="detail-divider"></div>
+                    <div class="detail-section">
+                        <h4>Services Booked:</h4>
+                        <div id="detail-services">---</div>
+                    </div>
+                    <div class="detail-row total">
+                        <span class="detail-label">Total Amount:</span>
+                        <span class="detail-value" id="detail-total">₹0.00</span>
+                    </div>
+                </div>
+
+                <div class="modal-message">
+                    <p>A confirmation email has been sent to <strong id="modal-email">your email</strong></p>
+                    <p>Our team will contact you shortly to schedule your pickup.</p>
+                </div>
+
+                <button class="btn-primary modal-btn" onclick="closeThankYouModal()">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🧺 LaundryMart</h3>
+                <p>About us</p>
+                <p class="footer-description">Lorem ipsum Dolor Sit Amet Consectetur. Sed At Congue.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Important Links</h3>
+                <ul>
+                    <li><a href="#home">About us</a></li>
+                    <li><a href="#services">Contact us</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>mail@site.com</p>
+                <p>+91 91234 56780</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#">📷</a>
+                    <a href="#">f</a>
+                    <a href="#">𝕏</a>
+                    <a href="#">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "m9WkuokCO_D7mOJ9Z",
+      });
+   })();
+</script>
+    <script src="script.js"></script>
+</body>
+</html>
