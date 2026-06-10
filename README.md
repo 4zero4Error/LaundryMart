@@ -64,4 +64,4 @@ Go to [https://dashboard.emailjs.com/sign-up] sign up for a free account.
 6. Check your email (or the customer's email) - you should have received the booking confirmation!
 
 ---
-
+deployed link: https://laundrymart8080.netlify.app
