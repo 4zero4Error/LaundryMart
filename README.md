@@ -81,4 +81,5 @@ The newsletter form currently just shows a "Thank you" alert. If you want it to 
 - `styles.css` – Makes the website look nice
 - `README.md` – This file!
 
+deployed : https://laundrymart343.netlify.app
 
